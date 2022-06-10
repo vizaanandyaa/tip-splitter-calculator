@@ -73,6 +73,15 @@ body{
     font-size: 18px;
 }
 
+.active{
+    font-family: 'Space Mono', monospace;
+    background-color: hsl(172, 67%, 45%);
+    border: none;
+    color: hsl(183, 100%, 15%);
+    font-weight: 700;
+    font-size: 18px;
+}
+
 .custom-tip{
     font-family: 'Space Mono', monospace;
     text-align: center;
