@@ -24,5 +24,33 @@ customTipInput.addEventListener('input',tipInput);
 totalPersonInput.addEventListener('input',personInput);
 resetButton.addEventListener('input', resetBtn);
 
+//function section
+function billInput(){
+    totalBillValue = parseFloat(totalBillInput.value);
+    calculate();
+}
+
+function tipBtn(button){
+    tipButtons.forEach(tipButton =>{
+        tipButton.classList.remove('active');
+        if(button.target.innerHTML == tipButton.innerHTML){
+            tipButton.classList.add('active');
+            totalBillValue = parseFloat(tipButton.innerHTML) / 100;
+        }
+    })
+    customTipInput.value = "";
+    calculate();
+}
+
+function tipInput(){
+    totalBillValue = parseFloat(customTipInput.value) / 100;
+    tipButtons.forEach(tipButton =>{
+        tipButton.classList.remove('active');
+    })
+    if(customTipInput.value !== ''){
+        calculate();
+    }
+}
+
 
 
