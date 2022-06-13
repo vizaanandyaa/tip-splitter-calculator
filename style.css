@@ -7,6 +7,10 @@ body{
     font-family: 'Space Mono', monospace;
 }
 
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
 .container{
     background-color: white;
     margin: 5% auto;
@@ -30,15 +34,20 @@ body{
 
 .total-bill,#totalPerson{
     background-color: hsl(189, 41%, 97%);
-    border: none;
+    border: white 2px solid;
     height: 35px;
     margin-bottom: 15px;
+    padding-right: 10px;
     border-radius:5px;
     width: 95%;
     text-align: end;
     font-family: 'Space Mono', monospace;
     font-weight: 700;
     color: hsl(183, 100%, 15%);
+}
+
+.total-bill:focus,#totalPerson:focus{
+    outline: none;
 }
 
 .total-bill{
@@ -96,7 +105,7 @@ body{
 .right-section{
     background-color: hsl(183, 100%, 15%);
     width: 50%;
-    padding: 10px 40px;
+    padding: 10px 30px;
     border-radius: 15px;
 }
 
@@ -120,7 +129,7 @@ body{
 
 #tip-amount-result,#total-result{
     float: right;
-    width: 60%;
+    width: 68%;
     color: hsl(172, 67%, 45%);
     font-size: 30px;
     font-weight: 700;
@@ -145,14 +154,17 @@ body{
 @media(max-width :980px){
     .container{
         display: block;
+        width: 70%;
+        padding: 10px;
     }
 
     .left-section{
         width: 100%;
+        margin: 0;
     }
 
     .right-section{
-        width: 92%;
+        width:87%;
         padding: 20px;
     }
 }
